@@ -4,7 +4,7 @@
     gt::cols_label(
       status_color = "",
       id = gt::md("**ID**"),
-      label = gt::md("**Affirmation**"),
+      label = gt::md("**Validation**"),
       priority = gt::md("**Priority**"),
       data_frames = gt::md("**Data Frames**"),
       columns = gt::md("**Columns**"),
