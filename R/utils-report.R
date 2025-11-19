@@ -107,7 +107,7 @@
     summary_parts <- c(summary_parts, paste0("<strong>ID:</strong>&nbsp;", id))
   }
   if (!is.na(label) && label != "") {
-    summary_parts <- c(summary_parts, paste0("<strong>Affirmation:</strong>&nbsp;", label))
+    summary_parts <- c(summary_parts, paste0("<strong>Validation:</strong>&nbsp;", label))
   }
   if (!is.na(priority) && priority != "") {
     summary_parts <- c(summary_parts, paste0("<strong>Priority:</strong>&nbsp;", priority))
