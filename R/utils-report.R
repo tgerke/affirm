@@ -125,13 +125,13 @@
     paste0("<strong>Error Rate:</strong>&nbsp;", sprintf("%.1f%%", error_rate * 100)),
     paste0("<strong>Listing Download:</strong>&nbsp;", csv_download_link)
   )
-  
+
   summary_html <- paste0(
     '<div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; margin-bottom: 10px; font-size: 13px;">',
     paste(paste0('<span style="display: inline-flex; align-items: center;">', summary_parts, '</span>'), collapse = ' | '),
     '</div>'
   )
-  
+
   # Create the data table HTML if there are errors
   if (is.null(data) || nrow(data) == 0) {
     data_section <- '<div style="color: #666; font-style: italic; font-size: 13px;">No validation failures</div>'
@@ -144,7 +144,7 @@
         column_labels.font.weight = "bold"
       ) |>
       gt::as_raw_html()
-    
+
     data_section <- as.character(htmltools::tags$details(
       htmltools::tags$summary(
         style = "cursor: pointer; color: #0066cc; font-size: 13px; user-select: none; font-weight: 500;",
@@ -156,7 +156,7 @@
       )
     ))
   }
-  
+
   # Combine summary and data sections
   as.character(htmltools::div(
     style = "padding: 8px; background-color: #f8f9fa; border-radius: 4px; margin: -1px;",
@@ -587,7 +587,7 @@
 
     cli::cli_ol()  # Start the main ordered list
     for (i in seq_along(affirmations)) {
-      cli::cli_li(paste("Affirmation:", "{.code {error_affirmation(affirmations[[i]])}}"))
+      cli::cli_li(paste("Validation:", "{.code {error_affirmation(affirmations[[i]])}}"))
       cli::cli_ul()
       cli::cli_li("{.var {error_col(missing_columns[[i]])}}\n\n")
       cli::cli_end()  # End the unordered list
