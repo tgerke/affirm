@@ -103,21 +103,22 @@
 .create_gt_expandable_details_fullwidth <- function(data, id, label, priority, data_frames, columns, error_n, total_n, error_rate, csv_download_link) {
   # Build the summary information
   summary_parts <- c()
-  if (!is.na(id) && id != "") {
-    summary_parts <- c(summary_parts, paste0("<strong>ID:</strong>&nbsp;", id))
-  }
+  # Hide ID, Data Frames, and Columns sections
+  # if (!is.na(id) && id != "") {
+  #   summary_parts <- c(summary_parts, paste0("<strong>ID:</strong>&nbsp;", id))
+  # }
   if (!is.na(label) && label != "") {
     summary_parts <- c(summary_parts, paste0("<strong>Validation:</strong>&nbsp;", label))
   }
   if (!is.na(priority) && priority != "") {
     summary_parts <- c(summary_parts, paste0("<strong>Priority:</strong>&nbsp;", priority))
   }
-  if (!is.na(data_frames) && data_frames != "") {
-    summary_parts <- c(summary_parts, paste0("<strong>Data Frames:</strong>&nbsp;", data_frames))
-  }
-  if (!is.na(columns) && columns != "") {
-    summary_parts <- c(summary_parts, paste0("<strong>Columns:</strong>&nbsp;", columns))
-  }
+  # if (!is.na(data_frames) && data_frames != "") {
+  #   summary_parts <- c(summary_parts, paste0("<strong>Data Frames:</strong>&nbsp;", data_frames))
+  # }
+  # if (!is.na(columns) && columns != "") {
+  #   summary_parts <- c(summary_parts, paste0("<strong>Columns:</strong>&nbsp;", columns))
+  # }
   summary_parts <- c(
     summary_parts,
     paste0("<strong>No. Errors:</strong>&nbsp;", error_n),
