@@ -24,14 +24,10 @@ details within the summary table showing validation failure data.
 Defaults to \code{FALSE}. When \code{TRUE}, adds a "Details" column with expandable
 sections containing nested gt tables of validation failures.}
 
-\item{file}{A file path to save the xlsx file}
-
 \item{affirmation_name}{A string for affirmation names; the item name
 in curly brackets is replaced with the item value (see glue::glue). Item names
 accepted include: \code{id}, \code{label}, \code{priority}, \code{data_frames}, \code{columns}, \code{error_n}, \code{total_n}.
 Defaults to \code{"{data_frames}{id}"}.}
-
-\item{overwrite}{Overwrite existing file (Defaults to \code{TRUE} as with \code{write.table})}
 
 \item{previous_file}{A string of the file path to the previous affirmation Excel workbook containing \code{assigned_to}, \code{status}, and \code{comment} fields that need to be carried forward to this report}
 }
